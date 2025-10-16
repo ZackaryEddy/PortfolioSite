@@ -1,103 +1,318 @@
-import Image from "next/image";
+import Image from 'next/image';
+import ContactForm from './components/ContactForm';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-coral-50 dark:bg-slate-900 transition-colors">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-coral-50 to-coral-100 dark:from-slate-900 dark:to-slate-800 transition-colors">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/assets/pexels-timmossholder-2432221.jpg"
+            alt="Modern workspace"
+            fill
+            className="object-cover opacity-15 dark:opacity-8"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 dark:from-blue-900/30 dark:to-purple-900/30"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+            Websites that actually
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              {' '}
+              work
+            </span>{' '}
+            for you.
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-700 dark:text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            I&apos;m Zack Eddy, the developer behind Sparkline Creative. I
+            design and build modern websites that help small businesses stand
+            out and stay ahead.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg">
+              Start Your Project
+            </button>
+            <button className="border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200">
+              View My Work
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-6 bg-coral-100 dark:bg-slate-800 transition-colors">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              Here&apos;s what I can help with:
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white font-bold text-sm">1</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                      Custom websites made from scratch
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400">
+                      Tailored solutions that perfectly match your brand and
+                      business needs.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white font-bold text-sm">2</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                      Redesigns that bring old sites back to life
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400">
+                      Modern makeovers that improve user experience and
+                      performance.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white font-bold text-sm">3</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                      Performance and SEO improvements
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400">
+                      Fast-loading sites that rank well and convert visitors.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white font-bold text-sm">4</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                      Regular updates and long-term support
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400">
+                      Ongoing maintenance to keep your site secure and
+                      up-to-date.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <Image
+                src="/assets/pexels-energepic-com-27411-313690.jpg"
+                alt="Developer workspace"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-2xl"
+              />
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl opacity-80"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 px-6 bg-coral-50 dark:bg-slate-800 transition-colors">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative order-2 md:order-1">
+              <Image
+                src="/assets/pexels-olly-927022.jpg"
+                alt="Planning and collaboration"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-2xl"
+              />
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl opacity-80"></div>
+            </div>
+
+            <div className="order-1 md:order-2">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+                How it all comes together:
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mb-8"></div>
+              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+                We&apos;ll start with a quick chat about what you need — your
+                goals, audience, and style. Then I&apos;ll sketch, code, and
+                test until everything feels right.
+              </p>
+              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                You&apos;ll see progress the whole way, no surprises or jargon.
+                Just clear communication and quality results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 px-6 bg-coral-100 dark:bg-slate-900 transition-colors">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+                A bit about me:
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mb-8"></div>
+              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+                I&apos;m Zack Eddy, a web developer with a passion for creating
+                beautiful, functional websites. With years of experience in the
+                industry, I understand what it takes to build sites that not
+                only look great but also perform well and meet business goals.
+              </p>
+              <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                Every project is an opportunity to solve problems creatively and
+                deliver something that makes a real difference for my clients.
+              </p>
+            </div>
+
+            <div className="relative flex justify-center">
+              <div className="relative">
+                <Image
+                  src="/assets/ZackEddyHeadShot.jpg"
+                  alt="Zack Eddy - Professional headshot"
+                  width={400}
+                  height={400}
+                  className="rounded-full shadow-2xl object-cover aspect-square"
+                />
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full opacity-80"></div>
+                <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-60"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-20 px-6 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to get started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+            Whether you need a brand-new site or just want to improve what
+            you&apos;ve got, I&apos;m here to help. Let&apos;s make something
+            great together.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:zackeddy20@gmail.com"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+            >
+              Send me an email
+            </a>
+            <a
+              href="tel:+16015305305"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
+            >
+              Call (601) 530-5305
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-6 bg-coral-50 dark:bg-slate-800 transition-colors">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              Get in touch
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mb-8"></div>
+            <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed max-w-3xl mx-auto">
+              I&apos;m excited to hear about your project! Whether you have a
+              clear vision or just an idea you&apos;d like to explore,
+              let&apos;s start the conversation.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Contact Information */}
+            <div>
+              <div className="relative mb-8">
+                <Image
+                  src="/assets/pexels-fotios-photos-1833306.jpg"
+                  alt="Get in touch"
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-2xl"
+                />
+                <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl opacity-80"></div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold">@</span>
+                  </div>
+                  <div>
+                    <p className="text-slate-900 dark:text-white font-semibold">
+                      Email
+                    </p>
+                    <a
+                      href="mailto:zackeddy20@gmail.com"
+                      className="text-blue-600 dark:text-blue-400 hover:underline text-lg"
+                    >
+                      zackeddy20@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold">📞</span>
+                  </div>
+                  <div>
+                    <p className="text-slate-900 dark:text-white font-semibold">
+                      Phone
+                    </p>
+                    <a
+                      href="tel:+16015305305"
+                      className="text-blue-600 dark:text-blue-400 hover:underline text-lg"
+                    >
+                      (601) 530-5305
+                    </a>
+                  </div>
+                </div>
+
+                <div className="mt-8 p-6 bg-coral-100 dark:bg-slate-700 rounded-xl">
+                  <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
+                    Quick Response Promise
+                  </h4>
+                  <p className="text-slate-700 dark:text-slate-300">
+                    I typically respond to new inquiries within 24 hours. For
+                    urgent projects, feel free to call directly.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div>
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
