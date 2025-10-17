@@ -1,10 +1,17 @@
 import Image from 'next/image';
 import ContactForm from './components/ContactForm';
 
+/**
+ * Home Page Component
+ * Main portfolio page featuring hero section, services, process overview, and contact form
+ * Uses coral color scheme for light mode and slate colors for dark mode
+ * Includes multiple background images and smooth theme transitions
+ */
 export default function Home() {
   return (
+    // Main container with coral/slate backgrounds that transition between themes
     <div className="min-h-screen bg-coral-50 dark:bg-slate-900 transition-colors">
-      {/* Hero Section */}
+      {/* Hero Section - Full-screen intro with background image and call-to-action buttons */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-coral-50 to-coral-100 dark:from-slate-900 dark:to-slate-800 transition-colors">
         <div className="absolute inset-0 z-0">
           <Image
@@ -42,7 +49,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Lists what services are offered with numbered items and image */}
       <section className="py-20 px-6 bg-coral-100 dark:bg-slate-800 transition-colors">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -130,7 +137,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Process Section - Explains the development workflow with image and step-by-step breakdown */}
       <section className="py-20 px-6 bg-coral-50 dark:bg-slate-800 transition-colors">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -164,7 +171,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Personal introduction with skills, experience, and professional image */}
       <section className="py-20 px-6 bg-coral-100 dark:bg-slate-900 transition-colors">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -202,7 +209,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
+      {/* Call to Action Section - Prominent section encouraging visitors to start a project */}
       <section className="py-20 px-6 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -230,7 +237,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section - Contact form with multiple images and mailto functionality */}
       <section className="py-20 px-6 bg-coral-50 dark:bg-slate-800 transition-colors">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
