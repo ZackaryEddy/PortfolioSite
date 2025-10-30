@@ -56,7 +56,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           // Styling: Coral focus ring, theme-aware backgrounds and text colors
-          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-coral-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-coral-500 bg-white text-gray-900"
         />
       </div>
 
@@ -73,7 +73,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           // Styling: Same theme-aware styling as name field
-          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-coral-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-coral-500 bg-white text-gray-900"
         />
       </div>
 
@@ -90,7 +90,7 @@ export default function ContactForm() {
           rows={4}
           required
           // Styling: Textarea with resize disabled and same theme styling
-          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-coral-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-coral-500 bg-white text-gray-900 resize-none"
         />
       </div>
 

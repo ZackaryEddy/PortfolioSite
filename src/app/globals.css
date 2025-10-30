@@ -58,15 +58,15 @@ body {
 
 /* Scrollbar track (background area) */
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100 dark:bg-gray-800;
+  @apply bg-gray-100;
 }
 
 /* Scrollbar thumb (draggable part) */
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 dark:bg-gray-600 rounded-lg;
+  @apply bg-gray-300 rounded-lg;
 }
 
 /* Scrollbar thumb hover state */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-400 dark:bg-gray-500;
+  @apply bg-gray-400;
 }

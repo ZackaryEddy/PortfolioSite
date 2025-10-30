@@ -30,7 +30,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         document.documentElement.classList.add(savedTheme);
         return savedTheme;
       }
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const prefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
       const systemTheme = prefersDark ? 'dark' : 'light';
       // Apply system theme immediately to avoid flash
       document.documentElement.classList.remove('light', 'dark');
