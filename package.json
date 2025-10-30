@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "preinstall": "npm cache clean --force 2>/dev/null || true",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
