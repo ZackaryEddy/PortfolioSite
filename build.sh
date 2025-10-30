@@ -3,14 +3,14 @@
 
 set -e  # Exit on error
 
-echo "Cleaning npm cache..."
+echo "Cleaning npm cache to fix idealTree error..."
 npm cache clean --force || true
 
-echo "Removing node_modules and package-lock.json..."
-rm -rf node_modules package-lock.json || true
+echo "Removing node_modules only (keeping lock file)..."
+rm -rf node_modules || true
 
-echo "Installing dependencies..."
-npm install
+echo "Installing dependencies from lock file..."
+npm ci || npm install
 
 echo "Building Next.js static site..."
 npm run build
