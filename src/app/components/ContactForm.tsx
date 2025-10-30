@@ -45,7 +45,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
       {/* Name input field */}
       <div>
-        <label htmlFor="name" className="block text-sm font-medium mb-2">
+        <label htmlFor="name" className="block text-sm font-medium mb-2 dark:text-white">
           Name
         </label>
         <input
@@ -56,13 +56,13 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           // Styling: Coral focus ring, theme-aware backgrounds and text colors
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-coral-500 bg-white text-gray-900"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-coral-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
         />
       </div>
 
       {/* Email input field */}
       <div>
-        <label htmlFor="email" className="block text-sm font-medium mb-2">
+        <label htmlFor="email" className="block text-sm font-medium mb-2 dark:text-white">
           Email
         </label>
         <input
@@ -73,13 +73,13 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           // Styling: Same theme-aware styling as name field
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-coral-500 bg-white text-gray-900"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-coral-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
         />
       </div>
 
       {/* Message textarea field */}
       <div>
-        <label htmlFor="message" className="block text-sm font-medium mb-2">
+        <label htmlFor="message" className="block text-sm font-medium mb-2 dark:text-white">
           Message
         </label>
         <textarea
@@ -90,7 +90,7 @@ export default function ContactForm() {
           rows={4}
           required
           // Styling: Textarea with resize disabled and same theme styling
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-coral-500 bg-white text-gray-900 resize-none"
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-coral-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
         />
       </div>
 

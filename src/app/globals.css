@@ -1,5 +1,5 @@
 /* Import Tailwind CSS utilities and components */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Global smooth scrolling behavior for anchor navigation */
 html {
@@ -8,17 +8,17 @@ html {
 
 /* CSS Custom Properties for Light Mode Theme */
 :root {
-  --background: #fff5f5;     /* Light coral background (coral-50) */
-  --foreground: #1f2937;     /* Dark gray text for good contrast */
-  --surface: #ffe3e3;        /* Light coral surface color (coral-100) */
+  --background: #fff5f5; /* Light coral background (coral-50) */
+  --foreground: #1f2937; /* Dark gray text for good contrast */
+  --surface: #ffe3e3; /* Light coral surface color (coral-100) */
   --surface-secondary: #ffffff; /* Pure white for cards/elevated surfaces */
 }
 
 /* CSS Custom Properties for Dark Mode Theme */
 .dark {
-  --background: #0f172a;     /* Very dark slate background */
-  --foreground: #f1f5f9;     /* Light text for dark mode readability */
-  --surface: #1e293b;        /* Dark slate surface color */
+  --background: #0f172a; /* Very dark slate background */
+  --foreground: #f1f5f9; /* Light text for dark mode readability */
+  --surface: #1e293b; /* Dark slate surface color */
   --surface-secondary: #334155; /* Lighter slate for elevated surfaces */
 }
 
@@ -29,8 +29,8 @@ html {
   --color-foreground: var(--foreground);
   --color-surface: var(--surface);
   --color-surface-secondary: var(--surface-secondary);
-  --font-sans: var(--font-geist-sans);   /* Next.js font variable */
-  --font-mono: var(--font-geist-mono);   /* Next.js mono font variable */
+  --font-sans: var(--font-geist-sans); /* Next.js font variable */
+  --font-mono: var(--font-geist-mono); /* Next.js mono font variable */
 }
 
 /* Root HTML element styling */
@@ -58,15 +58,15 @@ body {
 
 /* Scrollbar track (background area) */
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100;
+  @apply bg-gray-100 dark:bg-gray-800;
 }
 
 /* Scrollbar thumb (draggable part) */
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 rounded-lg;
+  @apply bg-gray-300 dark:bg-gray-600 rounded-lg;
 }
 
 /* Scrollbar thumb hover state */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-400;
+  @apply bg-gray-400 dark:bg-gray-500;
 }
