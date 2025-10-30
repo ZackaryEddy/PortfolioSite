@@ -12,7 +12,10 @@ export default function Home() {
     // Main container with coral/slate backgrounds that transition between themes
     <div className="min-h-screen bg-coral-50 dark:bg-slate-900 transition-colors">
       {/* Hero Section - Full-screen intro with background image and call-to-action buttons */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-coral-50 to-coral-100 dark:from-slate-900 dark:to-slate-800 transition-colors">
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-coral-50 to-coral-100 dark:from-slate-900 dark:to-slate-800 transition-colors"
+      >
         <div className="absolute inset-0 z-0">
           <Image
             src="/assets/pexels-timmossholder-2432221.jpg"
@@ -39,18 +42,29 @@ export default function Home() {
             out and stay ahead.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg">
+            {/* Call-to-action button linking to contact section with smooth scroll */}
+            <a
+              href="#contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg text-center"
+            >
               Start Your Project
-            </button>
-            <button className="border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200">
-              View My Work
-            </button>
+            </a>
+            {/* Secondary button linking to services section */}
+            <a
+              href="#services"
+              className="border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 text-center"
+            >
+              View My Services
+            </a>
           </div>
         </div>
       </section>
 
       {/* Services Section - Lists what services are offered with numbered items and image */}
-      <section className="py-20 px-6 bg-coral-100 dark:bg-slate-800 transition-colors">
+      <section
+        id="services"
+        className="py-20 px-6 bg-coral-100 dark:bg-slate-800 transition-colors"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
@@ -172,7 +186,10 @@ export default function Home() {
       </section>
 
       {/* About Section - Personal introduction with skills, experience, and professional image */}
-      <section className="py-20 px-6 bg-coral-100 dark:bg-slate-900 transition-colors">
+      <section
+        id="about"
+        className="py-20 px-6 bg-coral-100 dark:bg-slate-900 transition-colors"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -238,7 +255,10 @@ export default function Home() {
       </section>
 
       {/* Contact Section - Contact form with multiple images and mailto functionality */}
-      <section className="py-20 px-6 bg-coral-50 dark:bg-slate-800 transition-colors">
+      <section
+        id="contact"
+        className="py-20 px-6 bg-coral-50 dark:bg-slate-800 transition-colors"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
@@ -253,73 +273,88 @@ export default function Home() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Contact Information */}
+            {/* Contact Image - Standalone image with rounded mask cutting off top 10% for better alignment */}
             <div>
-              <div className="relative mb-8">
+              <div className="relative pl-4 mb-8">
                 <Image
                   src="/assets/pexels-fotios-photos-1833306.jpg"
                   alt="Get in touch"
-                  width={600}
-                  height={400}
+                  width={400}
+                  height={267}
                   className="rounded-2xl shadow-2xl"
+                  style={{
+                    maskImage:
+                      'radial-gradient(ellipse 100% 90% at 50% 100%, black 0%, black 100%)',
+                    WebkitMaskImage:
+                      'radial-gradient(ellipse 100% 90% at 50% 100%, black 0%, black 100%)',
+                  }}
                 />
                 <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl opacity-80"></div>
               </div>
-
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">@</span>
-                  </div>
-                  <div>
-                    <p className="text-slate-900 dark:text-white font-semibold">
-                      Email
-                    </p>
-                    <a
-                      href="mailto:zackeddy20@gmail.com"
-                      className="text-blue-600 dark:text-blue-400 hover:underline text-lg"
-                    >
-                      zackeddy20@gmail.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">📞</span>
-                  </div>
-                  <div>
-                    <p className="text-slate-900 dark:text-white font-semibold">
-                      Phone
-                    </p>
-                    <a
-                      href="tel:+16015305305"
-                      className="text-blue-600 dark:text-blue-400 hover:underline text-lg"
-                    >
-                      (601) 530-5305
-                    </a>
-                  </div>
-                </div>
-
-                <div className="mt-8 p-6 bg-coral-100 dark:bg-slate-700 rounded-xl">
-                  <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
-                    Quick Response Promise
-                  </h4>
-                  <p className="text-slate-700 dark:text-slate-300">
-                    I typically respond to new inquiries within 24 hours. For
-                    urgent projects, feel free to call directly.
-                  </p>
-                </div>
-              </div>
             </div>
 
-            {/* Contact Form */}
-            <div>
+            {/* Contact Form - Moved down with more spacing for better visual balance */}
+            <div className="mt-40">
               <ContactForm />
             </div>
           </div>
         </div>
       </section>
+
+      {/* Bottom Contact Bar - Phone, email, and response promise in fixed bottom bar */}
+      <div className="bg-coral-100 dark:bg-slate-700 border-t border-coral-200 dark:border-slate-600 py-6">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-2 md:space-y-0">
+            {/* Contact Information */}
+            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">@</span>
+                </div>
+                <div>
+                  <p className="text-slate-900 dark:text-white font-medium text-sm">
+                    Email
+                  </p>
+                  <a
+                    href="mailto:zackeddy20@gmail.com"
+                    className="text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    zackeddy20@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">📞</span>
+                </div>
+                <div>
+                  <p className="text-slate-900 dark:text-white font-medium text-sm">
+                    Phone
+                  </p>
+                  <a
+                    href="tel:+16015305305"
+                    className="text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    (601) 530-5305
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Response Promise */}
+            <div className="bg-coral-200 dark:bg-slate-600 px-2 py-3 rounded-lg max-w-lg">
+              <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-1">
+                Quick Response Promise
+              </h4>
+              <p className="text-md text-slate-700 dark:text-slate-300">
+                I typically respond to new inquiries within 24 hours. For urgent
+                projects, feel free to call directly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

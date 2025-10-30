@@ -62,32 +62,32 @@ export default function RootLayout({
                 >
                   Sparkline Creative
                 </Link>
-                {/* Navigation menu - hidden on mobile, visible on desktop */}
+                {/* Navigation menu - hidden on mobile, visible on desktop, ordered to match page sections */}
                 <div className="hidden md:flex space-x-5">
-                  <Link
-                    href="/"
+                  <a
+                    href="#home"
                     className="text-gray-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
                   >
                     Home
-                  </Link>
-                  <Link
-                    href="/about"
+                  </a>
+                  <a
+                    href="#services"
+                    className="text-gray-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+                  >
+                    Services
+                  </a>
+                  <a
+                    href="#about"
                     className="text-gray-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
                   >
                     About
-                  </Link>
-                  <Link
-                    href="/projects"
-                    className="text-gray-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
-                  >
-                    Projects
-                  </Link>
-                  <Link
-                    href="/contact"
+                  </a>
+                  <a
+                    href="#contact"
                     className="text-gray-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
                   >
                     Contact
-                  </Link>
+                  </a>
                 </div>
               </div>
               {/* Right side of navigation - contains theme toggle */}

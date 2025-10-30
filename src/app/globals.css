@@ -1,6 +1,11 @@
 /* Import Tailwind CSS utilities and components */
 @import "tailwindcss";
 
+/* Global smooth scrolling behavior for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
 /* CSS Custom Properties for Light Mode Theme */
 :root {
   --background: #fff5f5;     /* Light coral background (coral-50) */
