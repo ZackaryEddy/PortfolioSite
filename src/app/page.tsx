@@ -17,12 +17,14 @@ export default function Home() {
         className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-coral-50 to-coral-100 dark:from-slate-900 dark:to-slate-800 transition-colors"
       >
         <div className="absolute inset-0 z-0">
+          {/* Hero background image - unoptimized for static export */}
           <Image
             src="/assets/pexels-timmossholder-2432221.jpg"
             alt="Modern workspace"
             fill
             className="object-cover opacity-15 dark:opacity-8"
             priority
+            unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 dark:from-blue-900/30 dark:to-purple-900/30"></div>
         </div>
@@ -138,12 +140,14 @@ export default function Home() {
             </div>
 
             <div className="relative">
+              {/* Services section image - unoptimized for static export */}
               <Image
                 src="/assets/pexels-energepic-com-27411-313690.jpg"
                 alt="Developer workspace"
                 width={600}
                 height={400}
                 className="rounded-2xl shadow-2xl"
+                unoptimized
               />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl opacity-80"></div>
             </div>
@@ -156,12 +160,14 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 md:order-1">
+              {/* Process section image - unoptimized for static export */}
               <Image
                 src="/assets/pexels-olly-927022.jpg"
                 alt="Planning and collaboration"
                 width={600}
                 height={400}
                 className="rounded-2xl shadow-2xl"
+                unoptimized
               />
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl opacity-80"></div>
             </div>
@@ -211,12 +217,14 @@ export default function Home() {
 
             <div className="relative flex justify-center">
               <div className="relative">
+                {/* About section headshot - unoptimized for static export */}
                 <Image
                   src="/assets/ZackEddyHeadShot.jpg"
                   alt="Zack Eddy - Professional headshot"
                   width={400}
                   height={400}
                   className="rounded-full shadow-2xl object-cover aspect-square"
+                  unoptimized
                 />
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full opacity-80"></div>
                 <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-60"></div>
@@ -276,12 +284,14 @@ export default function Home() {
             {/* Contact Image - Standalone image with rounded mask cutting off top 10% for better alignment */}
             <div>
               <div className="relative pl-4 mb-8">
+                {/* Contact section image - unoptimized for static export */}
                 <Image
                   src="/assets/pexels-fotios-photos-1833306.jpg"
                   alt="Get in touch"
                   width={400}
                   height={267}
                   className="rounded-2xl shadow-2xl"
+                  unoptimized
                   style={{
                     maskImage:
                       'radial-gradient(ellipse 100% 90% at 50% 100%, black 0%, black 100%)',

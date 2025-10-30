@@ -48,12 +48,13 @@ export default function RootLayout({
           <nav className="sticky top-0 z-50 backdrop-blur-md bg-coral-50/90 dark:bg-slate-900/90 border-b border-coral-200 dark:border-slate-700 px-6 py-4 shadow-sm dark:shadow-slate-900/50">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
               <div className="flex items-center space-x-8">
-                {/* Company logo */}
+                {/* Company logo - unoptimized for static export */}
                 <Image
                   src="/assets/SparklineLogo.png"
                   alt="Logo"
                   width={40}
                   height={40}
+                  unoptimized
                 />
                 {/* Company name/brand link */}
                 <Link
