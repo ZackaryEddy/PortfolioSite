@@ -245,18 +245,12 @@ export default function Home() {
             you&apos;ve got, I&apos;m here to help. Let&apos;s make something
             great together.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <a
-              href="mailto:zackeddy20@gmail.com"
+              href="mailto:Zack@sparkline.pro"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
               Send me an email
-            </a>
-            <a
-              href="tel:+16015305305"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
-            >
-              Call (601) 530-5305
             </a>
           </div>
         </div>
@@ -326,27 +320,10 @@ export default function Home() {
                     Email
                   </p>
                   <a
-                    href="mailto:zackeddy20@gmail.com"
+                    href="mailto:Zack@sparkline.pro"
                     className="text-blue-600 dark:text-blue-400 hover:underline"
                   >
-                    zackeddy20@gmail.com
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">📞</span>
-                </div>
-                <div>
-                  <p className="text-slate-900 dark:text-white font-medium text-sm">
-                    Phone
-                  </p>
-                  <a
-                    href="tel:+16015305305"
-                    className="text-blue-600 dark:text-blue-400 hover:underline"
-                  >
-                    (601) 530-5305
+                    Zack@sparkline.pro
                   </a>
                 </div>
               </div>
@@ -358,8 +335,7 @@ export default function Home() {
                 Quick Response Promise
               </h4>
               <p className="text-md text-slate-700 dark:text-slate-300">
-                I typically respond to new inquiries within 24 hours. For urgent
-                projects, feel free to call directly.
+                I typically respond to new inquiries within 24 hours.
               </p>
             </div>
           </div>
