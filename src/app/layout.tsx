@@ -37,8 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // Set initial theme class and language
-    <html lang="en" className="light">
+    // Language set, theme class managed by ThemeProvider on client side
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-coral-50 dark:bg-slate-900 text-gray-900 dark:text-slate-100 transition-colors`}
       >

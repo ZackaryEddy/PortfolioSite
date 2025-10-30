@@ -20,22 +20,25 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
  * Handles theme persistence, system preference detection, and DOM class management
  */
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('light');
-
-  // Effect to initialize theme on component mount
-  useEffect(() => {
-    // Check localStorage for saved theme preference
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else {
-      // Check system preference if no saved theme
-      const prefersDark = window.matchMedia(
-        '(prefers-color-scheme: dark)'
-      ).matches;
-      setTheme(prefersDark ? 'dark' : 'light');
+  // Initialize theme from localStorage or system preference immediately on client
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme') as Theme;
+      if (savedTheme) {
+        // Apply saved theme immediately to avoid flash
+        document.documentElement.classList.remove('light', 'dark');
+        document.documentElement.classList.add(savedTheme);
+        return savedTheme;
+      }
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const systemTheme = prefersDark ? 'dark' : 'light';
+      // Apply system theme immediately to avoid flash
+      document.documentElement.classList.remove('light', 'dark');
+      document.documentElement.classList.add(systemTheme);
+      return systemTheme;
     }
-  }, []);
+    return 'light';
+  });
 
   // Effect to apply theme changes to the DOM and persist to localStorage
   useEffect(() => {
